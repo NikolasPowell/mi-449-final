@@ -3,16 +3,17 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import video1 from './Spiral Records.mp4';
 import image1 from './recordPlayer.png';
+import image2 from './Record.png';
 
 function App() {
   return (
     <div className="App">
       <div className='row ms-0 me-0'>
-        <div className='col-15 p-0'>
-        <p className='firstText m-0' >
-          Spiral Records
-        </p>
-        <video className ="newVideo" src={video1} width = "100%"  autoPlay loop muted/>
+        <div className='p-0'>
+          <p className='firstText m-0' >
+            Spiral Records
+          </p>
+            <video className ="newVideo" src={video1} width = "100%"  autoPlay loop muted/>
         </div>
       </div>
       <div className='row justify-content-center'>
@@ -41,24 +42,46 @@ function App() {
             </p>
         </div>
       </div>
-      <div className='row'>
-        <div className='imageContainer mt-5'>
-          <img src={image1} />
+        <div className='container3 mt-5 mb-5 p-0'>
+          <img src={image1} className='firstImage img-fluid opacity-25' />
+          <p className='sixthText text-white fs-3 text-start'>
+            “I love the wide selection of records.” <br />
+            -Bob
+          </p>
+          <p className='seventhText text-white fs-3 text-start'>
+            “Records here are my favorite!” <br />
+            -Jeff
+          </p>
+          <p className='eighthText text-white fs-3 text-start'>
+            “You will never be disappointed with <br /> what Spiral Records have to offer.” <br />
+            -Jenny
+          </p>
+          <p className='ninthText text-white fs-3 text-start'>
+            “Who knew record fanatics would love <br /> this website!” <br />
+            -Tom
+          </p>
+          <p className='tenthText text-white fs-3 text-start'>
+            “I come here daily to see their awesome <br /> selection!” <br />
+            -Timmy
+          </p>
         </div>
-      </div>
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className='footer row mt-5'>
+          <div className='container4 mt-3'>
+            <img src={image2} className='secondImage img-fluid ms-5' />
+            <p className='eleventhText fs-3 text-white text-center'>
+              Spiral Records
+            </p>
+            <p className='twelvethText fs-3 text-white text-center'>
+              <a href='https://www.linkedin.com/in/nikolas-powell-265bb9196/'>LinkedIn</a>
+            </p>
+            <p className='thirteenthText fs-3 text-white text-center'>
+              <a href='https://github.com/NikolasPowell'>Github</a>
+            </p>
+            <p className='fourteenthText fs-5 text-white text-center'>
+              Website created, designed, and developed by Nikolas Powell 2022©
+            </p>
+          </div>
+        </div>
     </div>
   );
 }
