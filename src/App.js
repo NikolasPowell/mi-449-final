@@ -1,9 +1,204 @@
+import {useState} from 'react'
+import {supabase} from './supabaseData';
+import {Row, Col} from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import video1 from './Spiral Records.mp4';
 import image1 from './recordPlayer.png';
 import image2 from './Record.png';
+import image3 from './greetavanfleet.JPG';
+import image4 from './metallica.JPG';
+import image5 from './ledzepplin.JPG';
+import image6 from './rollingstones.JPG';
+
+function RecordOutput() {
+  const [newRecords, setNewRecords] = useState ([]);
+  async function getRecords() {
+    let {data: records, error } = await supabase
+    .from('records')
+    .select('*')
+    .eq('id', 1)
+    
+  setNewRecords(records);
+  }
+  //getRecords();
+  return(
+    <>
+    <button onClick={getRecords}>View This Record</button>
+    <p />
+    <table>
+      {
+        newRecords.map(r => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card'>
+              <img src={image3} className='card-img-top' alt='picture of vynil record' />
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{r.artist}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{r.song}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{r.description}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+    </>
+  )
+}
+
+function RecordOutput2() {
+  const [newRecords, setNewRecords] = useState ([]);
+  async function getRecords() {
+    let {data: records, error } = await supabase
+    .from('records')
+    .select('*')
+    .eq('id', 2)
+    
+  setNewRecords(records);
+  }
+  //getRecords();
+  return(
+    <>
+    <button onClick={getRecords}>View This Record</button>
+    <p />
+    <table>
+      {
+        newRecords.map(r => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card'>
+            <img src={image4} className='card-img-top' alt='picture of vynil record' />
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{r.artist}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{r.song}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{r.description}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+    </>
+  )
+}
+
+function RecordOutput3() {
+  const [newRecords, setNewRecords] = useState ([]);
+  async function getRecords() {
+    let {data: records, error } = await supabase
+    .from('records')
+    .select('*')
+    .eq('id', 3)
+    
+  setNewRecords(records);
+  }
+  //getRecords();
+  return(
+    <>
+    <button onClick={getRecords}>View This Record</button>
+    <p />
+    <table>
+      {
+        newRecords.map(r => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card'>
+            <img src={image5} className='card-img-top' alt='picture of vynil record' />
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{r.artist}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{r.song}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{r.description}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+    </>
+  )
+}
+
+function RecordOutput4() {
+  const [newRecords, setNewRecords] = useState ([]);
+  async function getRecords() {
+    let {data: records, error } = await supabase
+    .from('records')
+    .select('*')
+    .eq('id', 4)
+    
+  setNewRecords(records);
+  }
+  //getRecords();
+  return(
+    <>
+    <button onClick={getRecords}>View This Record</button>
+    <p />
+    <table>
+      {
+        newRecords.map(r => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card'>
+            <img src={image6} className='card-img-top' alt='picture of vynil record' />
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{r.artist}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{r.song}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{r.description}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+    </>
+  )
+}
 
 function App() {
   return (
@@ -40,6 +235,20 @@ function App() {
             <p className='fifthText fs-3 text-start ms-5 mt-3'>
               Our Selection:
             </p>
+            <Row lg={4}>
+            <Col>
+              <RecordOutput />
+            </Col>
+            <Col>
+              <RecordOutput2 />
+            </Col>
+            <Col>
+              <RecordOutput3 />
+            </Col>
+            <Col>
+              <RecordOutput4 />
+            </Col>
+            </Row>
         </div>
       </div>
         <div className='container3 mt-5 mb-5 p-0'>
@@ -78,7 +287,7 @@ function App() {
               <a href='https://github.com/NikolasPowell'>Github</a>
             </p>
             <p className='fourteenthText fs-5 text-white text-center'>
-              Website created, designed, and developed by Nikolas Powell 2022©
+              Website created, designed, and developed by Nikolas Powell 2023©
             </p>
           </div>
         </div>

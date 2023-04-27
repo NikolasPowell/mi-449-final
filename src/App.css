@@ -126,3 +126,12 @@ html, body {
   display: flex;
   position: absolute;
 }
+
+.newCard {
+  width: 24rem;
+  grid-row: 1;
+}
+
+.container5{
+  display: grid;
+}
