@@ -235,7 +235,7 @@ function App() {
             <p className='fifthText fs-3 text-start ms-5 mt-3'>
               Our Selection:
             </p>
-            <Row lg={4}>
+            <Row sx={1} lg={4}>
             <Col>
               <RecordOutput />
             </Col>
