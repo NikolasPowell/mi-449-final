@@ -31,8 +31,8 @@ function RecordOutput() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card'>
-              <img src={image3} className='card-img-top' alt='picture of vynil record' />
+            <div className='newCard text-center card container-fluid'>
+              <img src={image3} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
                   <h5 className='card-title'>
@@ -78,8 +78,8 @@ function RecordOutput2() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card'>
-            <img src={image4} className='card-img-top' alt='picture of vynil record' />
+            <div className='newCard text-center card container-fluid'>
+            <img src={image4} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
                   <h5 className='card-title'>
@@ -125,8 +125,8 @@ function RecordOutput3() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card'>
-            <img src={image5} className='card-img-top' alt='picture of vynil record' />
+            <div className='newCard text-center card container-fluid'>
+            <img src={image5} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
                   <h5 className='card-title'>
@@ -172,8 +172,8 @@ function RecordOutput4() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card'>
-            <img src={image6} className='card-img-top' alt='picture of vynil record' />
+            <div className='newCard text-center card container-fluid'>
+            <img src={image6} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
                   <h5 className='card-title'>
@@ -251,7 +251,7 @@ function App() {
             </Row>
         </div>
       </div>
-        <div className='container3 mt-5 mb-5 p-0'>
+        <div className='container3 mt-5 mb-5 p-0  container-fluid'>
           <img src={image1} className='firstImage img-fluid opacity-25' />
           <p className='sixthText text-white fs-3 text-start'>
             “I love the wide selection of records.” <br />
