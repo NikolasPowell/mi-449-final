@@ -31,7 +31,7 @@ function RecordOutput() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card container-fluid'>
+            <div className='newCard text-center card container-fluid p-0'>
               <img src={image3} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
@@ -78,7 +78,7 @@ function RecordOutput2() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card container-fluid'>
+            <div className='newCard text-center card container-fluid p-0'>
             <img src={image4} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
@@ -125,7 +125,7 @@ function RecordOutput3() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card container-fluid'>
+            <div className='newCard text-center card container-fluid p-0'>
             <img src={image5} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
@@ -172,7 +172,7 @@ function RecordOutput4() {
       {
         newRecords.map(r => (
           <div className='container5 pb-2'>
-            <div className='newCard text-center card container-fluid'>
+            <div className='newCard text-center card container-fluid p-0'>
             <img src={image6} className='card-img-top img-fluid' alt='picture of vynil record' />
               <div className='card-body'>
                 <tr>
@@ -251,46 +251,53 @@ function App() {
             </Row>
         </div>
       </div>
-        <div className='container3 mt-5 mb-5 p-0  container-fluid'>
-          <img src={image1} className='firstImage img-fluid opacity-25' />
-          <p className='sixthText text-white fs-3 text-start'>
-            “I love the wide selection of records.” <br />
-            -Bob
-          </p>
-          <p className='seventhText text-white fs-3 text-start'>
-            “Records here are my favorite!” <br />
-            -Jeff
-          </p>
-          <p className='eighthText text-white fs-3 text-start'>
-            “You will never be disappointed with <br /> what Spiral Records have to offer.” <br />
-            -Jenny
-          </p>
-          <p className='ninthText text-white fs-3 text-start'>
-            “Who knew record fanatics would love <br /> this website!” <br />
-            -Tom
-          </p>
-          <p className='tenthText text-white fs-3 text-start'>
-            “I come here daily to see their awesome <br /> selection!” <br />
-            -Timmy
+      <div className='container3 mt-5 mb-5 p-0  container-fluid'>
+        <img src={image1} className='firstImage img-fluid opacity-25' />
+        <p className='sixthText text-white fs-3 text-start'>
+          “I love the wide selection of records.” <br />
+          -Bob
+        </p>
+        <p className='seventhText text-white fs-3 text-start'>
+          “Records here are my favorite!” <br />
+          -Jeff
+        </p>
+        <p className='eighthText text-white fs-3 text-start'>
+          “You will never be disappointed with <br /> what Spiral Records have to offer.” <br />
+          -Jenny
+        </p>
+        <p className='ninthText text-white fs-3 text-start'>
+          “Who knew record fanatics would love <br /> this website!” <br />
+          -Tom
+        </p>
+        <p className='tenthText text-white fs-3 text-start'>
+          “I come here daily to see their awesome <br /> selection!” <br />
+          -Timmy
+        </p>
+      </div>
+      <div className='emailSignUp mt-5'>
+        <div className='container6 container-fluid'>
+        <p className='fifthteenText fs-3 text-white text-center'>
+            Sign-Up for our news letter
           </p>
         </div>
-        <div className='footer row mt-5'>
-          <div className='container4 mt-3'>
-            <img src={image2} className='secondImage img-fluid ms-5' />
-            <p className='eleventhText fs-3 text-white text-center'>
-              Spiral Records
-            </p>
-            <p className='twelvethText fs-3 text-white text-center'>
-              <a href='https://www.linkedin.com/in/nikolas-powell-265bb9196/'>LinkedIn</a>
-            </p>
-            <p className='thirteenthText fs-3 text-white text-center'>
-              <a href='https://github.com/NikolasPowell'>Github</a>
-            </p>
-            <p className='fourteenthText fs-5 text-white text-center'>
-              Website created, designed, and developed by Nikolas Powell 2023©
-            </p>
-          </div>
+      </div>
+      <div className='footer row mt-5'>
+        <div className='container4 mt-3 container-fluid'>
+          <img src={image2} className='secondImage img-fluid ms-5' />
+          <p className='eleventhText fs-3 text-white text-center'>
+            Spiral Records
+          </p>
+          <p className='twelvethText fs-3 text-white text-center'>
+            <a href='https://www.linkedin.com/in/nikolas-powell-265bb9196/'>LinkedIn</a>
+          </p>
+          <p className='thirteenthText fs-3 text-white text-center'>
+            <a href='https://github.com/NikolasPowell'>Github</a>
+          </p>
+          <p className='fourteenthText fs-5 text-white text-center'>
+            Website created, designed, and developed by Nikolas Powell 2023©
+          </p>
         </div>
+      </div>
     </div>
   );
 }
