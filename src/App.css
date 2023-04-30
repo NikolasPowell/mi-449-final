@@ -63,7 +63,7 @@
   border-radius: 0 0 50% 50%;
 }
 
-.secondText, .thirdText, .fourthText, .fifthText, .sixthText, .seventhText, .eighthText, .ninthText, .tenthText, .eleventhText, .twelvethText, .thirteenthText, .fourteenthText, .fifthteenText {
+.secondText, .thirdText, .fourthText, .fifthText, .sixthText, .seventhText, .eighthText, .ninthText, .tenthText, .eleventhText, .twelvethText, .thirteenthText, .fourteenthText, .fifthteenText, .time {
   font-family: NewFont;
 }
 

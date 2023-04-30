@@ -1,6 +1,12 @@
 import {useState} from 'react'
 import {supabase} from './supabaseData';
+/*Learned through https://react-bootstrap.netlify.app/docs/layout/grid/#row documentation*/
 import {Row, Col} from 'react-bootstrap';
+/*Learned through https://supabase.com/docs/guides/auth/auth-helpers/auth-ui documentation && understanding through Andy's Tech Tutorials on YouTube https://www.youtube.com/watch?v=6ch1PtIqCUw*/
+import { Auth } from '@supabase/auth-ui-react'
+import {createClient} from '@supabase/supabase-js'
+import { ThemeSupa, } from '@supabase/auth-ui-shared'
+
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -12,6 +18,9 @@ import image4 from './metallica.JPG';
 import image5 from './ledzepplin.JPG';
 import image6 from './rollingstones.JPG';
 
+
+
+//function for record display
 function RecordOutput() {
   const [newRecords, setNewRecords] = useState ([]);
   async function getRecords() {
@@ -200,6 +209,12 @@ function RecordOutput4() {
   )
 }
 
+//const for userRegistration Learned through https://supabase.com/docs/guides/auth/auth-helpers/auth-ui documentation && understanding through Andy's Tech Tutorials on YouTube https://www.youtube.com/watch?v=6ch1PtIqCUw
+const logs = createClient(
+  'https://oqwmuvelxdzjwyqkhxym.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xd211dmVseGR6and5cWtoeHltIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODI2MjQ2MDIsImV4cCI6MTk5ODIwMDYwMn0.uydYJqld5PwOHCu_AweiWmNiCiOyews2ISbEUjyDYv4'
+)
+
 function App() {
   return (
     <div className="App">
@@ -211,11 +226,23 @@ function App() {
             <video className ="newVideo" src={video1} width = "100%"  autoPlay loop muted/>
         </div>
       </div>
-      <div className='row justify-content-center'>
-        <div className='col-3'>
-        <p className='secondText fs-2 text-white mt-4'>
-        For the Individuals who SPIRAL out of control for RECORDS
-        </p>
+      <div className='container-fluid'>
+        <div className='row ps-5 pe-5 mt-3'>
+          <div className='col-3'>
+            <p className='secondText fs-1 text-white mt-4 text-start'>
+              For the Individuals who <br /> <span className='fw-bold'>SPIRAL</span>
+            </p>
+          </div>
+          <div className='col-6'>
+            <p className='mt-5 text-white border-bottom border-white border-4'>
+           
+            </p>
+          </div>
+          <div className='col-3'>
+            <p className='secondText fs-1 text-white mt-4 text-end'>
+              out of control for <br /> <span className='fw-bold'>RECORDS</span>
+            </p>
+          </div>
         </div>
       </div>
       <div className='row justify-content-evenly'>
@@ -235,6 +262,7 @@ function App() {
             <p className='fifthText fs-3 text-start ms-5 mt-3'>
               Our Selection:
             </p>
+            {/*Learned through https://react-bootstrap.netlify.app/docs/layout/grid/#row documentation*/}
             <Row sm={1} lg={4}>
             <Col>
               <RecordOutput />
@@ -274,11 +302,13 @@ function App() {
           -Timmy
         </p>
       </div>
-      <div className='emailSignUp mt-5'>
-        <div className='container6 container-fluid'>
-        <p className='fifthteenText fs-3 text-white text-center'>
-            Sign-Up for our news letter
-          </p>
+      <div className='mt-5'>
+        <div className='container6 container-fluid text-white fs-1 pt-5 time col-8'>
+          {/*Learned through https://supabase.com/docs/guides/auth/auth-helpers/auth-ui documentation && understanding through Andy's Tech Tutorials on YouTube https://www.youtube.com/watch?v=6ch1PtIqCUw*/}
+          <Auth
+            supabaseClient={logs}
+            appearance={{ theme: ThemeSupa }}
+          />
         </div>
       </div>
       <div className='footer row mt-5'>
