@@ -310,7 +310,7 @@ function CompanyOutput3() {
     
   setNewCompany(companies);
   }
-  getCompany();
+  //getCompany();
   return (
     <>
     <button onClick={getCompany}>View This Company</button>
