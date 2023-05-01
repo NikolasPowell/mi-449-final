@@ -281,23 +281,23 @@ function App() {
       </div>
       <div className='container3 mt-5 mb-5 p-0  container-fluid'>
         <img src={image1} className='firstImage img-fluid opacity-25' />
-        <p className='sixthText text-white fs-3 text-start'>
+        <p className='sixthText text-white text-start'>
           “I love the wide selection of records.” <br />
           -Bob
         </p>
-        <p className='seventhText text-white fs-3 text-start'>
+        <p className='seventhText text-white text-start'>
           “Records here are my favorite!” <br />
           -Jeff
         </p>
-        <p className='eighthText text-white fs-3 text-start'>
+        <p className='eighthText text-white text-start'>
           “You will never be disappointed with <br /> what Spiral Records have to offer.” <br />
           -Jenny
         </p>
-        <p className='ninthText text-white fs-3 text-start'>
+        <p className='ninthText text-white text-start'>
           “Who knew record fanatics would love <br /> this website!” <br />
           -Tom
         </p>
-        <p className='tenthText text-white fs-3 text-start'>
+        <p className='tenthText text-white text-start'>
           “I come here daily to see their awesome <br /> selection!” <br />
           -Timmy
         </p>
