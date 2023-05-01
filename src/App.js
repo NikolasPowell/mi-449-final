@@ -209,6 +209,177 @@ function RecordOutput4() {
   )
 }
 
+//function for company display
+function CompanyOutput() {
+  const [newCompany, setNewCompany] = useState ([]);
+  async function getCompany() {
+    let {data: companies, error } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('id', 1)
+    
+  setNewCompany(companies);
+  }
+  getCompany();
+  return (
+    <table>
+      {
+        newCompany.map(c => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card container-fluid p-0'>
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{c.name}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{c.description}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{c.partner}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+  )
+}
+
+function CompanyOutput2() {
+  const [newCompany, setNewCompany] = useState ([]);
+  async function getCompany() {
+    let {data: companies, error } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('id', 2)
+    
+  setNewCompany(companies);
+  }
+  getCompany();
+  return (
+    <table>
+      {
+        newCompany.map(c => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card container-fluid p-0'>
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{c.name}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{c.description}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{c.partner}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+  )
+}
+
+function CompanyOutput3() {
+  const [newCompany, setNewCompany] = useState ([]);
+  async function getCompany() {
+    let {data: companies, error } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('id', 3)
+    
+  setNewCompany(companies);
+  }
+  getCompany();
+  return (
+    <table>
+      {
+        newCompany.map(c => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card container-fluid p-0'>
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{c.name}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{c.description}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{c.partner}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+  )
+}
+
+function CompanyOutput4() {
+  const [newCompany, setNewCompany] = useState ([]);
+  async function getCompany() {
+    let {data: companies, error } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('id', 4)
+    
+  setNewCompany(companies);
+  }
+  getCompany();
+  return (
+    <table>
+      {
+        newCompany.map(c => (
+          <div className='container5 pb-2'>
+            <div className='newCard text-center card container-fluid p-0'>
+              <div className='card-body'>
+                <tr>
+                  <h5 className='card-title'>
+                    <td>{c.name}</td>
+                  </h5>
+                </tr>
+                <tr>
+                  <p className='card-text'>
+                    <td>{c.description}</td>
+                  </p>
+                </tr>
+                <tr>
+                <p className='card-text'>
+                  <td>{c.partner}</td>
+                </p>
+                </tr>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </table>
+  )
+}
+
+
+
 //const for userRegistration Learned through https://supabase.com/docs/guides/auth/auth-helpers/auth-ui documentation && understanding through Andy's Tech Tutorials on YouTube https://www.youtube.com/watch?v=6ch1PtIqCUw
 const logs = createClient(
   'https://oqwmuvelxdzjwyqkhxym.supabase.co',
@@ -315,6 +486,28 @@ function App() {
           supabaseClient={logs}
           appearance={{ theme: ThemeSupa }}
         />
+      </div>
+      <div className='row ms-5 justify-content-center'>
+      <div className='container2 col-10 mt-5 rounded-3'>
+        <p className='fifthText text-white text-start'>
+          Our Partnered Companies:
+        </p>
+      {/*Learned through https://react-bootstrap.netlify.app/docs/layout/grid/#row documentation*/}
+      <Row sm={1} lg={4}>
+            <Col>
+              <CompanyOutput />
+            </Col>
+            <Col>
+              <CompanyOutput2 />
+            </Col>
+            <Col>
+              <CompanyOutput3 />
+            </Col>
+            <Col>
+              <CompanyOutput4 />
+            </Col>
+            </Row>
+            </div>
       </div>
       <div className='footer row mt-5'>
         <div className='container4 mt-3 container-fluid'>
