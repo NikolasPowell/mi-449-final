@@ -229,7 +229,7 @@ function App() {
       <div className='container-fluid'>
         <div className='row ps-5 pe-5 mt-3'>
           <div className='col-3'>
-            <p className='secondText fs-1 text-white mt-4 text-start'>
+            <p className='secondText text-white mt-4 text-start'>
               For the Individuals who <br /> <span className='fw-bold'>SPIRAL</span>
             </p>
           </div>
@@ -239,7 +239,7 @@ function App() {
             </p>
           </div>
           <div className='col-3'>
-            <p className='secondText fs-1 text-white mt-4 text-end'>
+            <p className='secondText text-white mt-4 text-end'>
               out of control for <br /> <span className='fw-bold'>RECORDS</span>
             </p>
           </div>
@@ -247,19 +247,19 @@ function App() {
       </div>
       <div className='row justify-content-evenly'>
         <div className='col-3'>
-          <p className='thirdText fs-3 text-white mt-4'>
+          <p className='thirdText text-white mt-4'>
               Hello and welcome all! Here at Spiral Records were dedicated to satisfy every customers needs with wanting any records known to man. We started out of a small garage in Lake Orion, MI and continue to grow and expand our business day by day. Your support is always apprecieated and loved so we thank you for that.
           </p>
         </div>
         <div className='col-3'>
-          <p className='fourthText fs-3 text-white mt-4'>
+          <p className='fourthText text-white mt-4'>
               We have all sorts of records waiting to be sold to you, our personal favorite is our prized Greeta Van Fleet record from their album From the Fires. If you're ever interested in purchasing this record, come swing by East Lansing and take a look at it. We also have Metalica, Rolling Stones, Van Halen, and much more!
           </p>
         </div>
       </div>
       <div className='row justify-content-center'>
         <div className='container2 col-10 mt-5 rounded-3'>
-            <p className='fifthText fs-3 text-start ms-5 mt-3'>
+            <p className='fifthText text-start ms-5 mt-3'>
               Our Selection:
             </p>
             {/*Learned through https://react-bootstrap.netlify.app/docs/layout/grid/#row documentation*/}
@@ -302,14 +302,19 @@ function App() {
           -Timmy
         </p>
       </div>
-      <div className='mt-5'>
-        <div className='container6 container-fluid text-white fs-1 pt-5 time col-8'>
-          {/*Learned through https://supabase.com/docs/guides/auth/auth-helpers/auth-ui documentation && understanding through Andy's Tech Tutorials on YouTube https://www.youtube.com/watch?v=6ch1PtIqCUw*/}
-          <Auth
-            supabaseClient={logs}
-            appearance={{ theme: ThemeSupa }}
-          />
+      <div className='row mt-5 text-center'>
+        <div className='col-14'>
+          <p className='fourthText text-white'>
+              Want to Log-in/Sign-up?
+          </p>
         </div>
+      </div>
+      <div className='container6 container-fluid text-white fs-1 pt-5 time col-8'>
+        {/*Learned through https://supabase.com/docs/guides/auth/auth-helpers/auth-ui documentation && understanding through Andy's Tech Tutorials on YouTube https://www.youtube.com/watch?v=6ch1PtIqCUw*/}
+        <Auth
+          supabaseClient={logs}
+          appearance={{ theme: ThemeSupa }}
+        />
       </div>
       <div className='footer row mt-5'>
         <div className='container4 mt-3 container-fluid'>

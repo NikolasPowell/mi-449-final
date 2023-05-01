@@ -61,10 +61,12 @@
   color: white;
   background-color: #ddd;
   border-radius: 0 0 50% 50%;
+  font-size: 1.5vw;
 }
 
 .secondText, .thirdText, .fourthText, .fifthText, .sixthText, .seventhText, .eighthText, .ninthText, .tenthText, .eleventhText, .twelvethText, .thirteenthText, .fourteenthText, .fifthteenText, .time {
   font-family: NewFont;
+  font-size: 1.5vw;
 }
 
 .container2 {
